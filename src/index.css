@@ -1,0 +1,90 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 191 97% 77%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 191 97% 77%;
+    --radius: 0.75rem;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .cyber-text {
+    @apply bg-cyber-gradient bg-clip-text text-transparent;
+  }
+
+  .matrix-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.15;
+    z-index: -1;
+  }
+
+  .matrix-column {
+    position: absolute;
+    width: 20px;
+    top: 0;
+    opacity: 0;
+    animation: matrix-rain 10s linear infinite;
+    color: #00F0FF;
+    text-align: center;
+    font-family: monospace;
+  }
+
+  .glass-card {
+    @apply bg-black/30 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: #0e0e13;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
