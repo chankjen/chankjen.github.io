@@ -1,6 +1,6 @@
 # 💫 About Me:
 
-Deep Learning Project<br>AI for Social Wellness<br>AI for Digital Inclusion<br>AI Ethics and Bias Mitigation
+Deep Learning Projects Technologist<br>AI for Social Wellness Ambasador<br>AI for Digital Inclusion Campainer<br>AI Ethics and Bias Mitigation Activist
 
 ## 🌐 Socials:
 
